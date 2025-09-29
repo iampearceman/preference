@@ -94,6 +94,7 @@ function UnsubscribeContent() {
   const workflowPreference = findWorkflowPreference();
   const isUnsubscribed = workflowPreference?.channels?.email === false;
 
+
   const handleUnsubscribeClick = async () => {
     if (!workflowPreference) {
       toast.error(`Could not find preference for workflow: ${workflowId}.`);
@@ -164,6 +165,12 @@ function UnsubscribeContent() {
           >
             <span className="flex items-center justify-center">Unsubscribe</span>
           </ActionButton>
+          
+          {!workflowPreference && (
+            <div className="text-sm text-red-400 mt-2">
+              No preference found for this workflow. This might be a configuration issue.
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -172,7 +179,9 @@ function UnsubscribeContent() {
 
 function UnsubscribePage() {
   const params = useParams();
-  const subscriberId = params.subscriberId as string;
+  const rawSubscriberId = params.subscriberId as string;
+  // Decode the URL-encoded subscriber ID (e.g., %3A becomes :)
+  const subscriberId = decodeURIComponent(rawSubscriberId);
   const applicationIdentifier = process.env.NEXT_PUBLIC_NOVU_APP_ID || 'wigHgL-WyfKf';
 
   return (
