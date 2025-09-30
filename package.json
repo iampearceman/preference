@@ -1,6 +1,7 @@
 {
-  "name": "preferance",
+  "name": "novu-notification-preferences",
   "version": "0.1.0",
+  "description": "Notification preferences management for Novu subscribers",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
