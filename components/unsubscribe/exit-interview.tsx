@@ -31,7 +31,7 @@ export function ExitInterview({ selectedReasons, onReasonsChange }: ExitIntervie
       <div className="space-y-1">
         <h2 className="text-sm font-semibold text-foreground">Quick feedback</h2>
         <p className="text-xs text-muted-foreground">
-          Help us improve by sharing why you're leaving
+          Help us improve by sharing why you&apos;re leaving
         </p>
       </div>
       <div className="grid gap-2 sm:grid-cols-2">

@@ -39,7 +39,7 @@ export function SuccessState({ showUndo, onUndo, undoLoading }: SuccessStateProp
         </div>
 
         <h1 className="text-2xl font-semibold tracking-tight text-foreground text-balance">
-          You've been unsubscribed
+          You&apos;ve been unsubscribed
         </h1>
 
         <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-sm mx-auto">

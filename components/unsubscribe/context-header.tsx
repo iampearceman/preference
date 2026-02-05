@@ -12,7 +12,7 @@ export function ContextHeader({ workflowName }: ContextHeaderProps) {
         Manage Subscription
       </h1>
       <p className="mt-3 text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
-        We understand priorities change. Before you go, we'd love to hear your thoughts.
+        We understand priorities change. Before you go, we&apos;d love to hear your thoughts.
       </p>
     </header>
   )

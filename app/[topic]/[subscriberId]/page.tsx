@@ -168,7 +168,7 @@ function UnsubscribeContent() {
       <main className="min-h-screen bg-background flex items-center justify-center px-4">
         <div className="mx-auto max-w-md text-center">
           <h1 className="text-2xl font-semibold tracking-tight text-foreground text-balance mb-2">
-            You're currently unsubscribed
+            You&apos;re currently unsubscribed
           </h1>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-sm mx-auto mb-6">
             from {formattedTopic}
