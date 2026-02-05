@@ -65,7 +65,7 @@ export function SuccessState({ showUndo, onUndo, undoLoading }: SuccessStateProp
         {!showUndo && (
           <div className="mt-8">
             <Button variant="outline" asChild className="rounded-lg px-5">
-              <a href="https://novu.co">Return to website</a>
+              <a href="https://novu.co?utm_source=preference_center&utm_medium=web&utm_content=return_to_website">Return to website</a>
             </Button>
           </div>
         )}

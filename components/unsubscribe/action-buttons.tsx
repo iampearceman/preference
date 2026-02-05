@@ -34,7 +34,7 @@ export function ActionButtons({ onUnsubscribe, loading, disabled, needsFeedback 
       <div className="mt-8 flex items-center justify-center gap-1.5 text-xs text-muted-foreground/50">
         <span>Powered by</span>
         <a
-          href="https://novu.co"
+          href="https://novu.co?utm_source=preference_center&utm_medium=web&utm_content=powered_by"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 transition-opacity opacity-50 hover:opacity-100"
