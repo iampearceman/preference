@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Novu Notification Preferences",
-  description: "Manage your notification preferences for Novu subscribers",
+  title: "Manage Subscription",
+  description: "Manage your newsletter subscription preferences",
   icons: {
     icon: '/favicon.svg',
   },
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
         <Providers>{children}</Providers>
       </body>
