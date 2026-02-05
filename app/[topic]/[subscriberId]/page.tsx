@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import UnsubscribeClient from './unsubscribe-client';
+import ClientWrapper from './client-wrapper';
 
 async function validateSubscriber(subscriberId: string): Promise<boolean> {
   const apiKey = process.env.NOVU_API_KEY;
@@ -26,12 +26,11 @@ interface PageProps {
 
 export default async function UnsubscribePage({ params }: PageProps) {
   const { topic, subscriberId } = await params;
-  const decodedSubscriberId = decodeURIComponent(subscriberId);
 
-  const subscriberExists = await validateSubscriber(decodedSubscriberId);
+  const subscriberExists = await validateSubscriber(subscriberId);
   if (!subscriberExists) {
     notFound();
   }
 
-  return <UnsubscribeClient subscriberId={decodedSubscriberId} topic={topic} />;
+  return <ClientWrapper subscriberId={subscriberId} topic={topic} />;
 }

@@ -237,7 +237,11 @@ interface UnsubscribePageProps {
 }
 
 export default function UnsubscribeClient({ subscriberId, topic }: UnsubscribePageProps) {
-  const applicationIdentifier = process.env.NEXT_PUBLIC_NOVU_APP_ID || 'wigHgL-WyfKf';
+  const applicationIdentifier = process.env.NEXT_PUBLIC_NOVU_APP_ID;
+
+  if (!applicationIdentifier) {
+    throw new Error('NEXT_PUBLIC_NOVU_APP_ID environment variable is required');
+  }
 
   useEffect(() => {
     mixpanel.identify(subscriberId);
